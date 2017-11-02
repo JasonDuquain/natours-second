@@ -1,0 +1,66 @@
+.btn {
+    
+    &:link, &:visited, & {
+        transition: transform 200ms 50ms;
+        
+    }
+    
+    //chng for the button element
+    
+    
+    &:hover {
+        
+    }
+
+    &:active, &:active {
+        
+    }
+
+    &--white {
+        
+    }
+
+    &--white::after {
+        
+    }
+        
+    &--green {
+        
+    }
+
+    &--green::after {
+        
+    }   
+        
+    &::after {
+        content: "";
+        
+    }
+
+
+    &:hover::after {
+        
+    }
+
+    &--animated {
+        
+    }
+        
+     
+}
+
+.btn-text {
+        &:link, &:visited {
+            
+        } 
+        
+        &:hover {
+            
+        }
+        
+        &:active {
+            
+        }
+    
+    }
+

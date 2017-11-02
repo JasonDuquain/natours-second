@@ -1,0 +1,46 @@
+.popup {
+    
+    
+    &:target {
+        
+    }
+    
+    &:target &__content {
+        
+    }
+    
+    &__content {
+        
+        //opacity: 0;
+        transition: all 500ms 200ms;
+    }
+    
+    &__left {
+            
+    }
+    
+    &__right {
+        
+    }
+    
+    &__img {
+        
+    }
+    
+    &__text {
+        
+    }
+    
+    &__close {
+        
+        &:link, &:visited {
+            
+        }
+        
+        &:hover {
+            
+        }
+    }
+ 
+    
+} // .popup

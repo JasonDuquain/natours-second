@@ -1,0 +1,39 @@
+.composition {
+    
+    
+    &__photo {
+        
+        
+        &--p1 {
+            
+        }
+        
+        &--p2 {
+            
+        }
+        
+        &--p3 {
+            
+        }
+        
+        &:hover {
+            
+        }
+        
+    }
+    
+    &:hover &__photo:not(:hover) {
+        
+    }
+    
+    
+}
+
+
+
+
+
+
+
+
+

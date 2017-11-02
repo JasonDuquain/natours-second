@@ -1,0 +1,35 @@
+.story {
+    
+    
+    & > * {
+       
+    }
+    
+    &__shape {
+        
+    }
+    
+    &__img {
+        
+    }
+    
+    &__text {
+       
+    }
+    
+    &__caption {
+        transition: all 500ms;
+        
+    }
+    
+    &:hover  &__caption {
+        
+    }
+    
+    &:hover &__img {
+        
+    }
+    
+    
+} //.story 
+
