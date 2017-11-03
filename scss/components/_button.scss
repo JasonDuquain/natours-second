@@ -35,11 +35,11 @@
     }
         
     &--green {
-        
+        background-color: $color-primary;   color: $color-white;     
     }
 
     &--green::after {
-        
+        background-color: $color-primary;       
     }   
         
     &::after {
@@ -70,15 +70,24 @@
 
 .btn-text {
         &:link, &:visited {
-            
+            font-size: $default-font-size;
+            color: $color-primary;
+            display: inline-block;
+            border-bottom: 1px solid currentColor;
+            padding: 3px;
+            transition: all 200ms 50ms;
         } 
         
         &:hover {
-            
+            background-color: $color-primary;
+            color: $color-white;
+            box-shadow: 0 1rem 2rem rgba($color-black, .15);
+            transform: translateY(-2px);
         }
         
         &:active {
-            
+            box-shadow: 0 .5rem 1rem rgba($color-black, .15);
+            transform: translateY(0);    
         }
     
     }
