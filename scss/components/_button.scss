@@ -12,7 +12,8 @@
     }
     
     //chng for the button element
-    
+    border: none;
+    cursor: pointer;
     
     &:hover {
         transform: translateY(-3px);
