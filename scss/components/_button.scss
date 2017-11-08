@@ -1,14 +1,14 @@
+
 .btn {
     
     &:link, &:visited, & {
-        transition: transform 200ms 50ms;
         text-transform: uppercase;
         padding: 1.5rem 4rem;
         display: inline-block;
         border-radius: 99em;
-        transition: all 200ms;
+        transition: transform 200ms 50ms;
         position: relative;
-		font-size: 1.6rem;
+        font-size: $default-font-size;
     }
     
     //chng for the button element
@@ -17,30 +17,31 @@
     
     &:hover {
         transform: translateY(-3px);
-        box-shadow: 0 1rem 2rem rgba($color-black, .2);
+        box-shadow: 0 1rem 2rem rgba($color-black,.2);
     }
 
-    &:active, &:focus {
+    &:active, &:active {
+        outline: none;
         transform: translateY(-1px);
-        box-shadow: 0 .5rem 1rem rgba($color-black, .2);
+        box-shadow: 0 .5rem 1rem rgba($color-black,.2);
     }
 
     &--white {
         background-color: $color-white;
         color: $color-grey-dark;
-        
     }
 
     &--white::after {
-        background-color: $color-white;        
+        background-color: $color-white;
     }
         
     &--green {
-        background-color: $color-primary;   color: $color-white;     
+        background-color: $color-primary;
+        color: $color-white;
     }
 
     &--green::after {
-        background-color: $color-primary;       
+        background-color: $color-primary;
     }   
         
     &::after {
@@ -48,35 +49,34 @@
         display: inline-block;
         height: 100%;
         width: 100%;
-        border-radius: 99em;
+        border-radius: 999em;
         position: absolute;
         top: 0;
         left: 0;
         z-index: -1;
-        transition: all 400ms;
-        
+        transition: all 400ms 50ms;
     }
 
+
     &:hover::after {
-        transform: scale(1.4, 1.6);
+        transform: scaleX(1.4) scaleY(1.6);
         opacity: 0;
     }
 
     &--animated {
-        animation: moveInBottom 500ms ease-out 75ms backwards;    
+        animation: moveInBottom 500ms ease-out 75ms backwards;
     }
         
      
-} //.btn
+}
 
 .btn-text {
         &:link, &:visited {
-            font-size: $default-font-size;
             color: $color-primary;
             display: inline-block;
-            border-bottom: 1px solid currentColor;
+            border-bottom: 1px solid $color-primary;
             padding: 3px;
-            transition: all 200ms 50ms;
+            font-size: $default-font-size;
         } 
         
         &:hover {
@@ -87,8 +87,7 @@
         }
         
         &:active {
-            box-shadow: 0 .5rem 1rem rgba($color-black, .15);
-            transform: translateY(0);    
+           box-shadow: 0 .5rem 1rem rgba($color-black, .15); 
         }
     
     }

@@ -1,42 +1,70 @@
 body {
     font-family: "Lato", sans-serif;
+    font-weight: 400;
+    /*font-size: 16px;*/
+    line-height: 1.7;
+    color: $color-grey-dark;
     
 }
 
 .heading-primary {
-    color: $color-white;    
+    color: $color-white;
     text-transform: uppercase;
+
     backface-visibility: hidden;
     margin-bottom: 6rem;
-    
+
     &--main {
         display: block;
         font-size: 6rem;
         font-weight: 400;
         letter-spacing: 3.5rem;
-        animation: moveInLeft 1000ms ease-out;
+    
+        animation-name: moveInLeft;
+        animation-duration: 1s;
+        animation-timing-function: ease-out;
+        
+        @include breakpoint(max-width $phone) {
+            letter-spacing: 1rem;
+            font-size: 5rem;
+        }
+    
     }
     
     &--sub {
         display: block;
-        font-size: 2rem;;
+        font-size: 2rem;
         font-weight: 700;
-        letter-spacing: 1.7rem;
-        animation: moveInRight 1000ms ease-out;
+        letter-spacing: 1.75rem;
+        animation: moveInRight 1s ease-out;
+        
+        @include breakpoint(max-width $phone) {
+            letter-spacing: .5rem;
+            
+        }
     }
-       
+    
 }
 
 .heading-secondary {
     font-size: 3.5rem;
     text-transform: uppercase;
     font-weight: 700;
-    display: inline-block;
     background-image: linear-gradient(to right, $color-primary-light, $color-primary-dark);
+    display: inline-block;
+    background-clip: text;
     -webkit-background-clip: text;
     color: transparent;
-    letter-spacing: 2px;
     transition: all 200ms 50ms;
+    letter-spacing: 2px;
+    
+    @include breakpoint(max-width $tab-port) {
+        font-size: 2.5rem;            
+    }
+    
+    @include breakpoint(max-width $phone) {
+        font-size: 2rem;            
+    }
     
     &:hover {
         transform: skewY(2deg) skewX(15deg) scale(1.1);
@@ -52,11 +80,10 @@ body {
 }
 
 .paragraph {
-    font-size: $default-font-size;
+    font-size: 1.6rem;
     
-    
-    &:not(:last-of-type) {
-        margin-bottom: 3rem;    
+    &:not(:last-child) {
+       margin-bottom: 3rem; 
     }
 }
 
